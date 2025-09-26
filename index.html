@@ -11,24 +11,21 @@
     th, td { border: 1px solid #ccc; padding: 10px; text-align: center; }
     th { background: #f4f4f4; }
     .total-box { margin-top: 20px; font-size: 18px; font-weight: bold; }
-    form.checkout { margin-top: 30px; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: #fafafa; }
-    form.checkout label { display: block; margin: 10px 0 5px; font-weight: bold; }
-    form.checkout input, form.checkout select, form.checkout textarea {
-      width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;
-    }
-    form.checkout button {
-      margin-top: 15px; padding: 12px; background: #2e7d32; color: #fff;
-      font-size: 16px; font-weight: bold; border: none; border-radius: 5px;
-      cursor: pointer;
-    }
-    form.checkout button:hover { background: #1b5e20; }
     .summary-line { margin-top: 6px; }
+    .form-box { margin-top: 40px; }
+    input, select, textarea { margin: 5px 0; padding: 8px; width: 100%; max-width: 400px; }
+    button {
+      background: #2e7d32; color: #fff; border: none;
+      padding: 12px 20px; border-radius: 5px; font-size: 16px; cursor: pointer;
+    }
+    button:hover { background: #1b5e20; }
   </style>
 </head>
 <body>
   <h1>🐓 Welcome to Legal Chicks Poultry Farm</h1>
   <p>Order your fresh poultry directly from our farm. Input the quantity you want for each product below.</p>
 
+  <!-- Order Table -->
   <form id="orderForm">
     <table>
       <thead>
@@ -41,92 +38,80 @@
       </thead>
       <tbody>
         <tr>
-  <td>Rhode Island Red – 1 Week Old Chick (7 days)</td>
-  <td>₱150</td>
-  <td><input type="number" min="0" value="0" class="qty" data-price="150"></td>
-  <td class="subtotal">₱0</td>
-</tr>
-<tr>
-  <td>Rhode Island Red – 2 Weeks Old (14 days)</td>
-  <td>₱220</td>
-  <td><input type="number" min="0" value="0" class="qty" data-price="220"></td>
-  <td class="subtotal">₱0</td>
-</tr>
-<tr>
-  <td>Rhode Island Red – 1 Month Old (30 days)</td>
-  <td>₱380</td>
-  <td><input type="number" min="0" value="0" class="qty" data-price="380"></td>
-  <td class="subtotal">₱0</td>
-</tr>
-<tr>
-  <td>Rhode Island Red – 2 Months Old (60 days)</td>
-  <td>₱680</td>
-  <td><input type="number" min="0" value="0" class="qty" data-price="680"></td>
-  <td class="subtotal">₱0</td>
-</tr>
-<tr>
-  <td>Rhode Island Red – 3 Months Old (90 days)</td>
-  <td>₱980</td>
-  <td><input type="number" min="0" value="0" class="qty" data-price="980"></td>
-  <td class="subtotal">₱0</td>
-</tr>
-<tr>
-  <td>Rhode Island Red – 4 Months Old (120 days)</td>
-  <td>₱1,280</td>
-  <td><input type="number" min="0" value="0" class="qty" data-price="1280"></td>
-  <td class="subtotal">₱0</td>
-</tr>
-<tr>
-  <td>Rhode Island Red – 5 Months Old (150 days, Ready-to-Lay)</td>
-  <td>₱1,580</td>
-  <td><input type="number" min="0" value="0" class="qty" data-price="1580"></td>
-  <td class="subtotal">₱0</td>
-</tr>
-<tr>
-  <td>Rhode Island Red – 6 Months Old (180 days, Breeder Stock)</td>
-  <td>₱1,880</td>
-  <td><input type="number" min="0" value="0" class="qty" data-price="1880"></td>
-  <td class="subtotal">₱0</td>
-</tr>
+          <td>Rhode Island Red – 1 Week Old (7 days)</td>
+          <td>₱150</td>
+          <td><input type="number" min="0" value="0" class="qty" data-price="150"></td>
+          <td class="subtotal">₱0</td>
+        </tr>
+        <tr>
+          <td>Rhode Island Red – 2 Weeks Old (14 days)</td>
+          <td>₱220</td>
+          <td><input type="number" min="0" value="0" class="qty" data-price="220"></td>
+          <td class="subtotal">₱0</td>
+        </tr>
+        <tr>
+          <td>Rhode Island Red – 1 Month Old (30 days)</td>
+          <td>₱380</td>
+          <td><input type="number" min="0" value="0" class="qty" data-price="380"></td>
+          <td class="subtotal">₱0</td>
+        </tr>
+        <tr>
+          <td>Rhode Island Red – 2 Months Old (60 days)</td>
+          <td>₱680</td>
+          <td><input type="number" min="0" value="0" class="qty" data-price="680"></td>
+          <td class="subtotal">₱0</td>
+        </tr>
+        <tr>
+          <td>Rhode Island Red – 3 Months Old (90 days)</td>
+          <td>₱980</td>
+          <td><input type="number" min="0" value="0" class="qty" data-price="980"></td>
+          <td class="subtotal">₱0</td>
+        </tr>
+        <tr>
+          <td>Rhode Island Red – 4 Months Old (120 days)</td>
+          <td>₱1,280</td>
+          <td><input type="number" min="0" value="0" class="qty" data-price="1280"></td>
+          <td class="subtotal">₱0</td>
+        </tr>
+        <tr>
+          <td>Rhode Island Red – 5 Months Old (150 days, Ready-to-Lay)</td>
+          <td>₱1,580</td>
+          <td><input type="number" min="0" value="0" class="qty" data-price="1580"></td>
+          <td class="subtotal">₱0</td>
+        </tr>
+        <tr>
+          <td>Rhode Island Red – 6 Months Old (180 days, Breeder Stock)</td>
+          <td>₱1,880</td>
+          <td><input type="number" min="0" value="0" class="qty" data-price="1880"></td>
+          <td class="subtotal">₱0</td>
+        </tr>
       </tbody>
     </table>
   </form>
 
+  <!-- Totals -->
   <div class="total-box">
     <div class="summary-line">Total Quantity: <span id="totalQty">0</span></div>
     <div class="summary-line">Subtotal: <span id="subtotal">₱0</span></div>
     <div class="summary-line">Discount: <span id="discount">₱0</span></div>
     <div class="summary-line">Final Total: <span id="total">₱0</span></div>
+    <div class="summary-line">Order Timestamp (Philippines): <span id="timestamp"></span></div>
   </div>
 
-  <!-- Checkout form -->
-  <form class="checkout" id="checkoutForm" method="POST" action="https://formspree.io/f/mwprporn">
-    <!-- Replace action above with your Formspree/Getform endpoint -->
+  <!-- Customer Info -->
+  <div class="form-box">
     <h2>Checkout</h2>
-
-    <label for="name">Full Name</label>
-    <input type="text" id="name" name="name" required placeholder="Juan Dela Cruz">
-
-    <label for="phone">Contact Number</label>
-    <input type="text" id="phone" name="phone" required placeholder="+63 9XX XXX XXXX">
-
-    <label for="location">Location</label>
-    <input type="text" id="location" name="location" required placeholder="Barangay, City">
-
-    <label for="method">Order Method</label>
-    <select id="method" name="method" required>
-      <option value="pickup">Farm Pickup</option>
-      <option value="delivery">Delivery (limited area)</option>
+    <input type="text" id="custName" placeholder="Full Name" required>
+    <input type="text" id="custContact" placeholder="Contact Number" required>
+    <input type="text" id="custLocation" placeholder="Location" required>
+    <select id="custMethod">
+      <option value="Pickup">Farm Pickup</option>
+      <option value="Delivery">Delivery</option>
     </select>
-
-    <label for="notes">Notes / Special Requests</label>
-    <textarea id="notes" name="notes" rows="3" placeholder="Preferred pickup time, etc."></textarea>
-
-    <input type="hidden" name="order_details" id="order_details">
-    <input type="hidden" name="order_total" id="order_total">
-
-    <button type="submit">Submit Order</button>
-  </form>
+    <textarea id="custNotes" placeholder="Notes / Special Requests"></textarea>
+    <br><br>
+    <button id="checkoutBtn">Proceed to Checkout</button>
+  </div>
 
   <script>
     const inputs = document.querySelectorAll(".qty");
@@ -134,13 +119,23 @@
     const discountEl = document.getElementById("discount");
     const totalEl = document.getElementById("total");
     const totalQtyEl = document.getElementById("totalQty");
-    const orderDetailsInput = document.getElementById("order_details");
-    const orderTotalInput = document.getElementById("order_total");
+    const timestampEl = document.getElementById("timestamp");
+
+    const custName = document.getElementById("custName");
+    const custContact = document.getElementById("custContact");
+    const custLocation = document.getElementById("custLocation");
+    const custMethod = document.getElementById("custMethod");
+    const custNotes = document.getElementById("custNotes");
+    const checkoutBtn = document.getElementById("checkoutBtn");
+
+    // Replace with your Google Form base URL
+    const formBaseURL = "https://docs.google.com/forms/d/e/1FAIpQLScXXXX/viewform?usp=pp_url";
+    const entryOrderDetails = "entry.397355570"; // Replace with your Order Details field ID
+
+    let subtotal = 0, discount = 0, finalTotal = 0, totalQty = 0, orderLines = [], timestamp = "";
 
     function updateTotals() {
-      let subtotal = 0;
-      let totalQty = 0;
-      let details = [];
+      subtotal = 0; totalQty = 0; orderLines = [];
 
       document.querySelectorAll("tbody tr").forEach(row => {
         const qty = parseInt(row.querySelector(".qty").value) || 0;
@@ -149,53 +144,52 @@
 
         row.querySelector(".subtotal").textContent = "₱" + rowSubtotal.toLocaleString();
 
-        if (qty > 0) {
-          details.push(`${row.cells[0].textContent}: ${qty} pcs — ₱${rowSubtotal.toLocaleString()}`);
-        }
+        if (qty > 0) orderLines.push(`${row.cells[0].textContent}: ${qty} pcs — ₱${rowSubtotal.toLocaleString()}`);
 
         subtotal += rowSubtotal;
         totalQty += qty;
       });
 
-      let discount = 0;
-      let discountNote = "";
-      if (totalQty >= 30) {
-        discount = subtotal * 0.05;
-        discountNote = ` (for bulk order of ${totalQty} items)`;
-      }
-
-      const finalTotal = subtotal - discount;
+      discount = totalQty >= 30 ? subtotal * 0.05 : 0;
+      finalTotal = subtotal - discount;
 
       subtotalEl.textContent = "₱" + subtotal.toLocaleString();
-      discountEl.textContent = discount > 0 
-        ? `-₱${discount.toLocaleString()}${discountNote}` 
-        : "₱0";
+      discountEl.textContent = discount > 0 ? `-₱${discount.toLocaleString()} (bulk order)` : "₱0";
       totalEl.textContent = "₱" + finalTotal.toLocaleString();
       totalQtyEl.textContent = totalQty;
 
-      // Generate timestamp in GMT+8 (Philippines)
       const now = new Date();
-      const timestamp = now.toLocaleString("en-PH", { timeZone: "Asia/Manila" });
-
-      // Save details to hidden inputs (with subtotal & discount breakdown)
-      details.push(`Subtotal (before discount): ₱${subtotal.toLocaleString()}`);
-      if (discount > 0) {
-        details.push(`Discount Applied: -₱${discount.toLocaleString()}${discountNote}`);
-      } else {
-        details.push(`No Discount Applied`);
-      }
-      details.push(`Final Total: ₱${finalTotal.toLocaleString()}`);
-      details.push(`Order Timestamp (Philippines): ${timestamp}`);
-
-      orderDetailsInput.value = details.join("\n");
-      orderTotalInput.value = "₱" + finalTotal.toLocaleString();
+      timestamp = now.toLocaleString("en-PH", { timeZone: "Asia/Manila" });
+      timestampEl.textContent = timestamp;
     }
 
-    inputs.forEach(input => {
-      input.addEventListener("input", updateTotals);
-    });
-
+    inputs.forEach(input => input.addEventListener("input", updateTotals));
     updateTotals();
+
+    checkoutBtn.addEventListener("click", () => {
+      if (!custName.value || !custContact.value || !custLocation.value) {
+        alert("Please fill out all required fields before checkout.");
+        return;
+      }
+
+      const orderDetailsText =
+        `Customer: ${custName.value}\n` +
+        `Contact: ${custContact.value}\n` +
+        `Location: ${custLocation.value}\n` +
+        `Order Method: ${custMethod.value}\n` +
+        `Notes: ${custNotes.value || "None"}\n\n` +
+        `--- Order Summary ---\n` +
+        (orderLines.length > 0 ? orderLines.join("\n") : "No items ordered.") + "\n" +
+        `Subtotal (before discount): ₱${subtotal.toLocaleString()}\n` +
+        (discount > 0
+          ? `Discount Applied: -₱${discount.toLocaleString()} (for bulk order of ${totalQty} items)\n`
+          : "No Discount Applied\n") +
+        `Final Total: ₱${finalTotal.toLocaleString()}\n` +
+        `Order Timestamp (Philippines): ${timestamp}`;
+
+      const formURL = `${formBaseURL}&${entryOrderDetails}=${encodeURIComponent(orderDetailsText)}`;
+      window.open(formURL, "_blank");
+    });
   </script>
 </body>
 </html>
